@@ -1,0 +1,50 @@
+@import url("header.css");
+@import url("home.css");
+@import url("sobre.css");
+@import url("projetos.css");
+@import url("contatos.css");
+
+:root {
+    --cor-de-fundo: #1D1E22;
+    --cor-letras: #FBFBFB;
+    --cor-secundaria: #A287F4;
+    --font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    width:100vw;
+    height: 100vh;
+    background-color: var(--cor-de-fundo);
+    font-family: var(--font-family);
+}
+
+@media screen and (max-width: 480px){
+    body {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    body {
+        width: 100%;
+    }
+}
+
+/*animação*/
+
+[data-anime] {
+    opacity:0;
+    transition: 0.5s;
+}
+
+[data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px,0px,0px);
+}
